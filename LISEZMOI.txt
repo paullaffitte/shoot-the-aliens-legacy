@@ -1,0 +1,13 @@
+Merci d'avoir téléchargé Shoot The Aliens ! J'espère que ce jeu vous procurera des heures d'amusement !
+
+/-------------\
+|Comment Jouer|
+\-------------/
+Touches fléchées : Strafe à gauche et à droite
+Espace : Commencer une nouvelle partie
+C : Faire une copie d'écran (screenshot)
+P : Mettre le jeu en pause
+Q : Quitter le jeu
+
+Et c'est tout ce dont vous avez besoin de savoir à propos des contrôlesdu jeu :)
+Amusez-vous !

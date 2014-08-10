@@ -1,0 +1,186 @@
+# depslib dependency file v1.0
+1394643250 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\gameengine.cpp
+	<SFML/Graphics.hpp>
+	"gameengine.h"
+	"gamestate.h"
+
+1392926357 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\gameengine.h
+	<vector>
+	<SFML/Graphics.hpp>
+
+1394741321 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\gamestate.h
+	"gameengine.h"
+
+1406917661 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\jeu.cpp
+	"jeu.h"
+
+1407609167 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\jeu.h
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<sstream>
+	<fstream>
+	<iostream>
+	<sstream>
+	<vector>
+	"gameengine.h"
+	"gamestate.h"
+	"joueur.h"
+	"alien.h"
+	"tir.h"
+	"explosion.h"
+	"fond.h"
+	"soundmanager.h"
+
+1406928617 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\main.cpp
+	<SFML/System.hpp>
+	<iostream>
+	"gameengine.h"
+	"jeu.h"
+
+1399569517 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\alien.cpp
+	"alien.h"
+	<stdlib.h>
+	<iostream>
+	<stdio.h>
+	<vector>
+
+1406909206 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\alien.h
+	"gamestate.h"
+	"vaisseau.h"
+
+1406909206 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\tir.h
+	"gamestate.h"
+	"soundmanager.h"
+	<vector>
+	<iostream>
+
+1406826149 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\tir.cpp
+	"tir.h"
+
+1402685493 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\joueur.cpp
+	"joueur.h"
+	<iostream>
+
+1399569517 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\joueur.h
+	"gamestate.h"
+	"vaisseau.h"
+	<SFML/Audio.hpp>
+
+1399061348 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\fond.cpp
+	"fond.h"
+
+1398196384 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\fond.h
+	<SFML/Graphics.hpp>
+	"gamestate.h"
+
+1406826149 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\explosion.cpp
+	"explosion.h"
+
+1406909206 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\explosion.h
+	"alien.h"
+	"joueur.h"
+	"soundmanager.h"
+
+1406909494 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\vaisseau.cpp
+	"vaisseau.h"
+
+1406909773 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\vaisseau.h
+	<iostream>
+	"gamestate.h"
+	"soundmanager.h"
+
+1397926248 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\alien.cpp
+	"alien.h"
+	<stdlib.h>
+	<iostream>
+	<stdio.h>
+	<vector>
+
+1397926133 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\alien.h
+	"gamestate.h"
+	"vaisseau.h"
+
+1394741321 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\gamestate.h
+	"gameengine.h"
+
+1392926357 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\gameengine.h
+	<vector>
+	<SFML/Graphics.hpp>
+
+1397931290 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\vaisseau.h
+	"gamestate.h"
+
+1397928290 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\explosion.cpp
+	"explosion.h"
+	<iostream>
+
+1397919125 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\explosion.h
+	"alien.h"
+	"joueur.h"
+
+1397933630 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\joueur.h
+	"gamestate.h"
+	"vaisseau.h"
+
+1397937045 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\fond.cpp
+	"fond.h"
+
+1394996440 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\fond.h
+	<SFML/Graphics.hpp>
+	"gamestate.h"
+
+1394643250 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\gameengine.cpp
+	<SFML/Graphics.hpp>
+	"gameengine.h"
+	"gamestate.h"
+
+1397935797 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\joueur.cpp
+	"joueur.h"
+	<iostream>
+
+1397936583 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\main.cpp
+	<SFML/System.hpp>
+	<iostream>
+	"gameengine.h"
+	"jeu.h"
+
+1398100576 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\jeu.h
+	"gamestate.h"
+	"alien.h"
+	"joueur.h"
+	"tir.h"
+	"explosion.h"
+	"fond.h"
+
+1397576353 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\tir.h
+	"gamestate.h"
+
+1394639549 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\tir.cpp
+	"tir.h"
+	<vector>
+	<iostream>
+
+1397928400 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\vaisseau.cpp
+	"vaisseau.h"
+
+1398100568 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens - sauvegarde\jeu.cpp
+	<fstream>
+	<iostream>
+	<sstream>
+	<vector>
+	<SFML/Graphics.hpp>
+	"gameengine.h"
+	"gamestate.h"
+	"jeu.h"
+
+1406928693 source:e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\soundmanager.cpp
+	"soundmanager.h"
+
+1406917414 e:\utilisateurs\ptitpaul\documents\développement\codeblocks c++\shoot the aliens\soundmanager.h
+	<iostream>
+	<vector>
+	<deque>
+	<map>
+	<SFML/Audio.hpp>
+	"vaisseau.h"
+
