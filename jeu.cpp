@@ -24,8 +24,6 @@ bool Collision(AABB objet1, AABB objet2)
           return true;
 }
 
-Jeu Jeu::m_Jeu;
-
 void Jeu::Init()
 {
     m_dimensionsJeu.x = 400;

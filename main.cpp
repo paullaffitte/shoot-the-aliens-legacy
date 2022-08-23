@@ -8,11 +8,12 @@ int main()
 {
     srand(time(NULL));
     GameEngine shootTheAliens;
+    Jeu jeu;
 	shootTheAliens.Init("Shoot The Aliens", 400, 700);
 	//shootTheAliens.getFenetre()->setMouseCursorVisible(false);
     shootTheAliens.getFenetre()->setFramerateLimit(60);
     shootTheAliens.getFenetre()->setVerticalSyncEnabled(true);
-	shootTheAliens.ChangeState(Jeu::Instance());
+	shootTheAliens.ChangeState(&jeu);
     sf::Image icon;
     icon.loadFromFile("ressources/images/64x64.png");
     shootTheAliens.getFenetre()->setIcon(64,64,icon.getPixelsPtr());
@@ -39,15 +40,15 @@ ALPHA :
 + Permettre le redimensionnement
 + Fond
 + Explosions
-+ Fluidifier les déplacements
-+ Un seul chronomètre
++ Fluidifier les dï¿½placements
++ Un seul chronomï¿½tre
 + Pause
 + Graphismes
 + Animations
 + Bruitages :
     + Explosions
     + Tirs
-    + Réacteurs :
+    + Rï¿½acteurs :
         + Avancer
         + Strafe
     + Ambiance d'espace
@@ -55,21 +56,21 @@ ALPHA :
 + Musique
 + Screenshots
 BETA :
-- Detection des mises à jour
+- Detection des mises ï¿½ jour
 - Ajouter un curseur
 - Multi-threading
-- Réglages volume
+- Rï¿½glages volume
 / Historique des scores
-- Bruitages améliorés :
-    - Bruitages générés aléatoirement à partir de la fusion des bruitages de base
+- Bruitages amï¿½liorï¿½s :
+    - Bruitages gï¿½nï¿½rï¿½s alï¿½atoirement ï¿½ partir de la fusion des bruitages de base
     - Prise en compte de la distance
     - Prise en compte du positionnement relatif (droite/gauche)
-- Accélération du fond lors de l'accélération des vaisseaux
+- Accï¿½lï¿½ration du fond lors de l'accï¿½lï¿½ration des vaisseaux
 - Intro
-- Modes de jeu : Chaqu'un accessibles indépendamment ou simultanéments (cases à cocher)
+- Modes de jeu : Chaqu'un accessibles indï¿½pendamment ou simultanï¿½ments (cases ï¿½ cocher)
     + Normal (gratuit)
-    - Bouclier (payant) : Bouclier disponible pour une durée limitée, chaque kill rajoutent de l'énergie au bouclier (ou tout les x kills)
-    - Assassin (payant) : Cooldown de game over remis à zéro par un kill
-    - Infinite Runner (payant) : Reprend la partie à 80% de la progression précédente (comprend les 3 modes de jeu précédents)
+    - Bouclier (payant) : Bouclier disponible pour une durï¿½e limitï¿½e, chaque kill rajoutent de l'ï¿½nergie au bouclier (ou tout les x kills)
+    - Assassin (payant) : Cooldown de game over remis ï¿½ zï¿½ro par un kill
+    - Infinite Runner (payant) : Reprend la partie ï¿½ 80% de la progression prï¿½cï¿½dente (comprend les 3 modes de jeu prï¿½cï¿½dents)
 - Optimisations
 */

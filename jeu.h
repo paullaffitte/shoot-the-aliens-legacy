@@ -33,18 +33,10 @@ public:
 
 	void EventFenetre();
 
-	static Jeu* Instance() {
-		return &m_Jeu;
-	}
-
-protected:
-	Jeu() { }
-
 private:
     sf::Event m_event;
     GameEngine* m_shootTheAliens;
 
-    static Jeu m_Jeu;
 	sf::View m_vuePrincipale;
 	sf::Vector2u m_dimensionsFenetre;
 	sf::Vector2u m_dimensionsJeu;
