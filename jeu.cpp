@@ -15,8 +15,8 @@ struct AABB
 
 bool Collision(AABB objet1, AABB objet2)
 {
-   if((objet2.x >= objet1.x + objet1.largeur)   // trop à droite
-	|| (objet2.x + objet2.largeur <= objet1.x)  // trop à gauche
+   if((objet2.x >= objet1.x + objet1.largeur)   // trop ï¿½ droite
+	|| (objet2.x + objet2.largeur <= objet1.x)  // trop ï¿½ gauche
 	|| (objet2.y >= objet1.y + objet1.hauteur)  // trop en bas
 	|| (objet2.y + objet2.hauteur <= objet1.y)) // trop en haut
           return false;
@@ -44,7 +44,7 @@ void Jeu::Init()
     m_highscore = 0;
     m_finPartie = false;
 
-    m_police.loadFromFile("ressources/BNMachine.ttf");
+    m_police.loadFromFile("ressources/bnmachine.ttf");
     m_start.setFont(m_police);
     m_start.setString("I Wanna Kill Aliens !");
     m_start.setCharacterSize(32);
@@ -99,21 +99,22 @@ void Jeu::Resume()
 
 void Jeu::HandleEvents(GameEngine* shootTheAliens)
 {
-    // On inspecte tous les évènements de la fenêtre qui ont été émis depuis la précédente itération
+    // On inspecte tous les ï¿½vï¿½nements de la fenï¿½tre qui ont ï¿½tï¿½ ï¿½mis depuis la prï¿½cï¿½dente itï¿½ration
+    m_shootTheAliens = shootTheAliens;
     sf::Event event;
     while(shootTheAliens->getFenetre()->pollEvent(event))
     {
-        //Evènement "fermeture demandée" : on ferme la fenêtre
+        //Evï¿½nement "fermeture demandï¿½e" : on ferme la fenï¿½tre
         if(event.type == sf::Event::Closed)
         {
             shootTheAliens->getFenetre()->close();
             shootTheAliens->Quit();
         }
 
-         //On attrape les évènements de redimensionnement
+         //On attrape les ï¿½vï¿½nements de redimensionnement
         if(event.type == sf::Event::Resized)
         {
-            //On met à jour la vue, avec la nouvelle taille de la fenêtre
+            //On met ï¿½ jour la vue, avec la nouvelle taille de la fenï¿½tre
             sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
             shootTheAliens->getFenetre()->setView(sf::View(visibleArea));
         }
@@ -166,7 +167,7 @@ void Jeu::HandleEvents(GameEngine* shootTheAliens)
 
         if(m_dansLeJeu)
         {
-            //Déplacement du joueur
+            //Dï¿½placement du joueur
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
             {
                 m_deplacerJoueur = GAUCHE;
@@ -218,7 +219,7 @@ void Jeu::Update(GameEngine* shootTheAliens)
             m_texteScore.setPosition(m_dimensionsJeu.x - m_rectangle.width - 5, -5);
 
 
-            //Déplacements du joueur
+            //Dï¿½placements du joueur
             m_joueur.deplacer(horlogePrincipale.getElapsedTime() - tempsPassePause, m_deplacerJoueur);
             m_sprite_joueur.setPosition(m_joueur.get_position());
             if(m_deplacerJoueur == GAUCHE || m_deplacerJoueur == DROITE) SoundManager::getInstance()->jouerStrafe(false, horlogePrincipale.getElapsedTime() - tempsPassePause);
@@ -243,14 +244,14 @@ void Jeu::Update(GameEngine* shootTheAliens)
                 m_sprite_alien.back().setPosition(sf::Vector2f(m_alien.back().get_position()));
                 m_aliensTotal++;
             }
-            //Alien dans l'écran
+            //Alien dans l'ï¿½cran
             sf::Vector2f posAlien = m_alien.front().get_position();
             if(posAlien.y < m_dimensionsJeu.y)
             {
                 //Actions
                 for(unsigned int i = 0 ; i < m_alien.size() && m_alien.size() > 0 ; i++)
                 {
-                    //Déplacements alien
+                    //Dï¿½placements alien
                     m_sprite_alien[i].setPosition(sf::Vector2f(m_alien[i].get_position()));
                     m_alien[i].avancer(horlogePrincipale.getElapsedTime() - tempsPassePause);
                     //Tir des aliens
@@ -263,18 +264,18 @@ void Jeu::Update(GameEngine* shootTheAliens)
                     }
                 }
             }else{
-                //Destruction de l'alien sorti de l'écran
+                //Destruction de l'alien sorti de l'ï¿½cran
                 m_alien.erase(m_alien.begin());
                 m_sprite_alien.erase(m_sprite_alien.begin());
             }
 
-            //Déplacement tirs
+            //Dï¿½placement tirs
             for(unsigned int i = 0 ; i < m_tir.size() && m_tir.size() > 0 ; i++)
             {
                 m_tir[i].avancer(horlogePrincipale.getElapsedTime() - tempsPassePause);
                 m_sprite_tir[i].setPosition(m_tir[i].get_position());
             }
-            //Destruction des tirs sortis de l'écran
+            //Destruction des tirs sortis de l'ï¿½cran
             if(m_tir.size() > 1)
             {
                 sf::Vector2f posTir = m_tir.front().get_position();
@@ -450,7 +451,7 @@ void Jeu::Update(GameEngine* shootTheAliens)
                 historique.close();
             }
 
-            //Réinitialisation pour une nouvelle partie
+            //Rï¿½initialisation pour une nouvelle partie
             m_score = 0;
             m_niveau = 1;
             m_mortsNiveauPrec = 0;
@@ -547,4 +548,11 @@ void Jeu::Draw(GameEngine* shootTheAliens)
     }
     shootTheAliens->getFenetre()->draw(m_version);
     shootTheAliens->getFenetre()->display();
+}
+
+//THREAD
+
+void Jeu::EventFenetre()
+{
+
 }

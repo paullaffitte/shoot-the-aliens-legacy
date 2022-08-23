@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <SFML/Graphics.hpp>
+
 using namespace std;
 
 class GameState;
@@ -28,7 +29,7 @@ public:
 	sf::RenderWindow* getFenetre() {return m_fenetre;}
 
 private:
-	// la pile d'états
+	//La pile d'ï¿½tats
 	vector<GameState*> states;
 
 	bool m_running;

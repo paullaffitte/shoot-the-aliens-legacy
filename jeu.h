@@ -31,6 +31,8 @@ public:
 	void Update(GameEngine* shootTheAliens);
 	void Draw(GameEngine* shootTheAliens);
 
+	void EventFenetre();
+
 	static Jeu* Instance() {
 		return &m_Jeu;
 	}
@@ -39,6 +41,9 @@ protected:
 	Jeu() { }
 
 private:
+    sf::Event m_event;
+    GameEngine* m_shootTheAliens;
+
     static Jeu m_Jeu;
 	sf::View m_vuePrincipale;
 	sf::Vector2u m_dimensionsFenetre;
@@ -61,7 +66,7 @@ private:
     bool m_dansLeJeu;
     bool m_pause;
     float m_difficulte;
-    int m_niveau; // Float pour éviter les résultat de division incohérents
+    int m_niveau; // Float pour ï¿½viter les rï¿½sultat de division incohï¿½rents
                     // A voir si possible de remettre en int sans bug
     int m_mortsNiveauPrec;
     int m_morts;
