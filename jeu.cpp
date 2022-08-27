@@ -51,9 +51,9 @@ void Jeu::Init()
     m_start.setOrigin(m_rectangle.width/2, m_rectangle.height/2);
 
     m_version.setFont(m_police);
-    m_version.setString("Beta 1.0");
+    m_version.setString("1.0.0 Legacy");
     m_version.setCharacterSize(13);
-    m_version.setColor(sf::Color::White);
+    m_version.setColor(sf::Color(255, 255, 255, 100));
 
     m_texteScore.setFont(m_police);
     m_texteScore.setCharacterSize(42);
@@ -183,7 +183,7 @@ void Jeu::Update(GameEngine* shootTheAliens)
 {
     m_dimensionsFenetre = shootTheAliens->getFenetre()->getSize();
     m_rectangle = m_version.getLocalBounds();
-    m_version.setPosition(m_rectangle.width - 45, m_dimensionsJeu.y - m_rectangle.height - 7);
+    m_version.setPosition(m_rectangle.width - 67, m_dimensionsJeu.y - m_rectangle.height - 7);
 
     if(m_dansLeJeu)
     {

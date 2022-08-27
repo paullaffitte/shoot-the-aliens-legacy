@@ -31,8 +31,6 @@ public:
 	void Update(GameEngine* shootTheAliens);
 	void Draw(GameEngine* shootTheAliens);
 
-	void EventFenetre();
-
 private:
 	sf::View m_vuePrincipale;
 	sf::Vector2u m_dimensionsFenetre;
