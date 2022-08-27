@@ -98,7 +98,6 @@ void Jeu::Resume()
 void Jeu::HandleEvents(GameEngine* shootTheAliens)
 {
     // On inspecte tous les �v�nements de la fen�tre qui ont �t� �mis depuis la pr�c�dente it�ration
-    m_shootTheAliens = shootTheAliens;
     sf::Event event;
     while(shootTheAliens->getFenetre()->pollEvent(event))
     {
@@ -546,11 +545,4 @@ void Jeu::Draw(GameEngine* shootTheAliens)
     }
     shootTheAliens->getFenetre()->draw(m_version);
     shootTheAliens->getFenetre()->display();
-}
-
-//THREAD
-
-void Jeu::EventFenetre()
-{
-
 }

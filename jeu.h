@@ -34,9 +34,6 @@ public:
 	void EventFenetre();
 
 private:
-    sf::Event m_event;
-    GameEngine* m_shootTheAliens;
-
 	sf::View m_vuePrincipale;
 	sf::Vector2u m_dimensionsFenetre;
 	sf::Vector2u m_dimensionsJeu;

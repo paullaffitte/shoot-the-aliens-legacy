@@ -32,7 +32,7 @@ private:
 	//La pile d'�tats
 	vector<GameState*> states;
 
-	bool m_running;
+	bool m_running = true;
 	bool m_fullscreen;
 	sf::RenderWindow* m_fenetre;
 };

@@ -8,6 +8,7 @@ Vaisseau::Vaisseau()
     m_vivant = true;
     m_opacite = 255;
     m_etat = 0;
+    m_vitesse = 0;
     m_id = Vaisseau::nbrDeVaisseaux;
     Vaisseau::nbrDeVaisseaux++;
 }
